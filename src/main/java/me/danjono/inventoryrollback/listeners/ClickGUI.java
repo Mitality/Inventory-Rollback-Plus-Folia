@@ -715,7 +715,7 @@ public class ClickGUI implements Listener {
                     return;
                 }
 
-                Bukkit.getScheduler().runTaskAsynchronously(InventoryRollback.getInstance(), () -> {
+                SchedulerUtils.runTaskAsynchronously(() -> {
                     // Unsupported on older versions
                     if (main.getVersion().lessThan(MCVersion.v1_11.toBukkitVersion())) {
                         return;
