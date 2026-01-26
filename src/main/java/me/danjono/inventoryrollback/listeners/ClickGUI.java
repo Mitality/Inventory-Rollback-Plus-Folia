@@ -771,7 +771,7 @@ public class ClickGUI implements Listener {
                         }
                     };
 
-                    Bukkit.getScheduler().runTask(main, t -> {
+                    SchedulerUtils.runTask(staff.getLocation(), () -> {
                         staff.getInventory().addItem(shulkers.toArray(new ItemStack[0]));
                         staff.closeInventory();
                     });
